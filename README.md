@@ -11,7 +11,7 @@ A simple drawing application with canvas and paint class in kotlin.
 ![Screenshot](screenshots/image3.jpg) 
 ![Screenshot](screenshots/image4.PNG) 
 # Features included
-This is just an initial version of this application.
-Six colors are there.
-Undo option is provided.
-Drawings can also be saved locally in the Download folder 
+ This is just an initial version of this application.
+ Six colors are there.
+ Undo option is provided.
+ Drawings can also be saved locally in the Download folder 
