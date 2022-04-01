@@ -1,11 +1,11 @@
 package com.example.mycanvas
 
 import android.Manifest
-import android.content.Context
-import android.content.ContextWrapper
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Bitmap.*
 import android.graphics.Canvas
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -18,7 +18,6 @@ import androidx.core.content.res.ResourcesCompat
 import com.example.android.minipaint.MyCanvasView
 import java.io.File
 import java.io.FileOutputStream
-import java.io.IOException
 import java.io.OutputStream
 
 
@@ -78,8 +77,14 @@ class MainActivity : AppCompatActivity() {
         saveButton.setOnClickListener {
             //
             // write permission to access the storage
-            requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
-            requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 1)
+            requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                val result: Int = this.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                if(result != PackageManager.PERMISSION_GRANTED){
+                    return@setOnClickListener
+                }
+            }
+
             //
             val bitmap = getScreenShotFromView(findViewById<FrameLayout>(R.id.frame));
             var result=saveImageToDownloadFolder(bitmap!!)
@@ -123,6 +128,7 @@ class MainActivity : AppCompatActivity() {
             screenshot = createBitmap(v.measuredWidth, v.measuredHeight, Config.ARGB_8888)
             // Now draw this bitmap on a canvas
             val canvas = Canvas(screenshot)
+
             v.draw(canvas)
         } catch (e: Exception) {
             Log.e("GFG", "Failed to capture screenshot because:" + e.message)
