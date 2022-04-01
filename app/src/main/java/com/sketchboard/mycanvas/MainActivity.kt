@@ -1,4 +1,4 @@
-package com.example.mycanvas
+package com.sketchboard.mycanvas
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -15,7 +15,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat.*
 import androidx.core.content.res.ResourcesCompat
-import com.example.android.minipaint.MyCanvasView
+import com.sketchboard.android.minipaint.MyCanvasView
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream

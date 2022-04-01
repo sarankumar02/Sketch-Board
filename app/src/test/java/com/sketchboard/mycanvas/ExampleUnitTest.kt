@@ -1,4 +1,4 @@
-package com.example.mycanvas
+package com.sketchboard.mycanvas
 
 import org.junit.Test
 

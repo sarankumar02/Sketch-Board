@@ -1,16 +1,15 @@
-package com.example.android.minipaint
+package com.sketchboard.android.minipaint
 
 import android.content.Context
 import android.graphics.*
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
 import androidx.core.content.res.ResourcesCompat
-import com.example.mycanvas.R
+import com.sketchboard.mycanvas.R
 import java.util.*
 
-//import com.example.minipaint.R
+//import com.sketchboard.minipaint.R
 
 // Stroke width for the the paint.
 private const val STROKE_WIDTH = 12f
