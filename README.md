@@ -6,6 +6,8 @@ A simple drawing application with canvas and paint class in kotlin.
 2. Dependencies will get installed and after that green play button on the top will get enabled.
 3. Run it by pressing the green play button and voila.
 
+# Screenshots
+![Screenshot](screenshots/image1.PNG) 
 # Features included
 This is just an initial version of this application.
 Six colors are there.
