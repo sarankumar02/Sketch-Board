@@ -8,6 +8,9 @@ A simple drawing application with canvas and paint class in kotlin.
 
 # Screenshots
 ![Screenshot](screenshots/image1.PNG) 
+![Screenshot](screenshots/image2.jpg) 
+![Screenshot](screenshots/image3.jpg) 
+![Screenshot](screenshots/image4.PNG) 
 # Features included
 This is just an initial version of this application.
 Six colors are there.
