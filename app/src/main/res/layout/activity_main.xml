@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/redColor"
+            android:text="" />
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/blueColor"
+            android:text="" />
+
+        <Button
+            android:id="@+id/green"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/greenColor"
+            android:text="" />
+
+        <Button
+            android:id="@+id/purple"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/purpleColor"
+            android:text="" />
+
+        <Button
+            android:id="@+id/black"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/blackColor"
+            android:text="" />
+
+        <Button
+            android:id="@+id/pink"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/pinkColor"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame">
+
+        <ImageButton
+            android:id="@+id/undo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/undo" />
+        <ImageButton
+            android:id="@+id/eraser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eraser" />
+        <ImageButton
+            android:id="@+id/stroke"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/paint_brush" />
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/floppy" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
